@@ -1,6 +1,6 @@
 const path = require("path");
 
-const groupKind = "argoproj.io/*";
+const groupKind = "argoproj.io/ApplicationSet/Application";
 
 const config = {
   entry: {
