@@ -1,10 +1,11 @@
 import * as React from "react";
 import Cookies from "js-cookie";
 import { ApplicationSet } from "./model/applicationset";
-import { Tree, ApplicationTree } from "./model/tree";
+import { Tree, Application } from "./model/tree";
+
 export const Extension = (props: {
   tree: Tree;
-  appTree: ApplicationTree;
+  appTree: Application;
   app: ApplicationSet;
 }) => {
   console.log(props.tree);
