@@ -11,7 +11,7 @@ export const Extension = () => {
   return (
     <div>
       {cookie}
-      <p>Alex</p>
+      <p>COOKIES</p>
     </div>
   );
 };
