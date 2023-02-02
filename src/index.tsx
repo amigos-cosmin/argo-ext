@@ -1,7 +1,10 @@
 import * as React from "react";
 import Cookies from "js-cookie";
-export const Extension = () => {
-  console.log("COSMIN");
+import { ApplicationSet } from "./model/applicationset";
+import { Tree } from "./model/tree";
+export const Extension = (props: { tree: Tree; app: ApplicationSet }) => {
+  console.log(props.tree);
+  console.log(props.app);
   let decodedCookie = document.cookie;
   console.log(decodedCookie);
   console.log(window.document.cookie);
@@ -11,7 +14,7 @@ export const Extension = () => {
   return (
     <div>
       {cookie}
-      <p>COOKIES</p>
+      <p>TRY AGAIN</p>
     </div>
   );
 };
