@@ -82,6 +82,9 @@ export const Extension = (props: {
           ))}
         </div>
       </div>
+      <div>
+        <h1>COSMIN</h1>
+      </div>
 
       <div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
         {items.map((item) => (
