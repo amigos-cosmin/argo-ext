@@ -8,19 +8,15 @@ export const Extension = (props: {
   app: ApplicationSet;
   manifest: ManifestResponse;
 }) => {
-  console.log(props.manifest);
-  console.log(props.app);
-  console.log(props.appTree);
-  let decodedCookie = document.cookie;
-  console.log(decodedCookie);
-  console.log(window.document.cookie);
+  console.log(props.tree);
+
   const cookie = Cookies.get("argocd.token");
   console.log(cookie);
 
   return (
     <div>
       {cookie}
-      <p>TRY AGAIN</p>
+      <p>Simple extension</p>
     </div>
   );
 };
