@@ -1,7 +1,7 @@
 import * as React from "react";
 import Moment from "react-moment";
 import { ApplicationSet } from "./model/applicationset";
-import { HealthStatus, Tree } from "./model/tree";
+import { HealthStatus, Tree, Application } from "./model/tree";
 
 const MAP_STATUS = {
   Healthy: { name: "fa-heart", spin: false, color: "rgb(24, 190, 148)" },
@@ -28,7 +28,11 @@ const MAP_STATUS = {
   },
 };
 
-export const Extension = (props: { tree: Tree; resource: ApplicationSet }) => {
+export const Extension = (props: {
+  tree: Tree;
+  resource: ApplicationSet;
+  application: Application;
+}) => {
   console.log(props);
 
   var items = props.tree.nodes.filter((item) =>
