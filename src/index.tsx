@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ApplicationSet } from "./model/applicationset";
+import { ConfigAuditReport } from "./model/applicationset";
 import { Tree, Application } from "./model/tree";
-import ConfigAuditReport from "./components/ConfigAuditReport";
+import ConfigAuditReportComponent from "./components/ConfigAuditReportComponent";
 
 // interface ApiManifestCallParams {
 //   name: string;
@@ -15,7 +15,7 @@ import ConfigAuditReport from "./components/ConfigAuditReport";
 
 export const Extension = (props: {
   tree: Tree;
-  resource: ApplicationSet;
+  resource: ConfigAuditReport;
   application: Application;
 }) => {
   //let report = {} as Node;
@@ -57,7 +57,7 @@ export const Extension = (props: {
   // console.log(data);
   return (
     <div>
-      <ConfigAuditReport data={data} />
+      <ConfigAuditReportComponent data={data} />
     </div>
   );
 };
