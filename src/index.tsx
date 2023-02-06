@@ -20,7 +20,7 @@ export const Extension = (props: {
   application: Application;
 }) => {
   let reports: Node[] = [];
-  let call: ApiManifestCallParams;
+
   console.log(props);
   props.tree.nodes.forEach((element) => {
     if (element.kind.includes("Report")) {
@@ -28,14 +28,15 @@ export const Extension = (props: {
     }
   });
   console.log(reports);
-
-  call.appNamespace = props.application.metadata.namespace;
-  call.group = reports[0].group;
-  call.kind = reports[0].kind;
-  call.name = reports[0].name;
-  call.namespace = reports[0].namespace;
-  call.resourceName = reports[0].name;
-  call.version = reports[0].version;
+  let call: ApiManifestCallParams = {
+    appNamespace: props.application.metadata.namespace,
+    group: reports[0].group,
+    kind: reports[0].kind,
+    name: reports[0].name,
+    namespace: reports[0].namespace,
+    resourceName: reports[0].name,
+    version: reports[0].version,
+  };
   console.log(call);
   let res = axios.get(
     "https://127.0.0.1:59935/api/v1/applications/" +
@@ -46,7 +47,7 @@ export const Extension = (props: {
   console.log(res);
   return (
     <div>
-      <p>HARD extension</p>
+      <p>IZI extension</p>
     </div>
   );
 };
