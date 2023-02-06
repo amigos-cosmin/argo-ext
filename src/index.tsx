@@ -44,10 +44,14 @@ export const Extension = (props: {
     "/resource";
 
   const res = ApiCall(call, url);
-  res.then((value) => {
-    console.log(value);
-    // Expected output: "Success!"
-  });
+  res
+    .then((value) => {
+      console.log("AAA", value);
+      // Expected output: "Success!"
+    })
+    .catch((err) => {
+      console.log("err", err);
+    });
 
   console.log("AICI", res);
   return (
@@ -70,5 +74,5 @@ async function ApiCall(params: ApiManifestCallParams, url: string) {
       group: params.group,
     },
   });
-  return JSON.parse(res.data.manifest);
+  return await JSON.parse(res.data.manifest);
 }
