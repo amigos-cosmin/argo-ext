@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ApplicationSet } from "./model/applicationset";
 import { Tree, Application } from "./model/tree";
+import ConfigAuditReport from "./components/ConfigAuditReport";
 
 // interface ApiManifestCallParams {
 //   name: string;
@@ -18,7 +19,7 @@ export const Extension = (props: {
   application: Application;
 }) => {
   //let report = {} as Node;
-
+  const data = props.resource;
   console.log(props.resource);
   // props.tree.nodes.forEach((element) => {
   //   if (element.name == props.app.metadata.name) {
@@ -56,7 +57,7 @@ export const Extension = (props: {
   // console.log(data);
   return (
     <div>
-      <p style={{ color: "red" }}>DATA MAN</p>
+      <ConfigAuditReport data={data} />
     </div>
   );
 };
