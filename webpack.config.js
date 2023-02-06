@@ -1,6 +1,6 @@
 const path = require("path");
 
-const groupKind = "argoproj.io/Application/ApplicationSet";
+const groupKind = "aquasecurity.github.io/*";
 
 const config = {
   entry: {
