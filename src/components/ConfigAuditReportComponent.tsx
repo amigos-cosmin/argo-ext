@@ -1,8 +1,10 @@
 import React from "react";
-import { ConfigAuditReport } from "../model/applicationset";
+import { ConfigAuditReportData } from "../model/applicationset";
+import { Application } from "../model/tree";
 
 export default function ConfigAuditReportComponent(props: {
-  data: ConfigAuditReport;
+  data: Application;
+  reportData: ConfigAuditReportData;
 }) {
   return (
     <div>
@@ -62,7 +64,7 @@ export default function ConfigAuditReportComponent(props: {
           <tr>
             <td>Sumamry</td>
             <td>
-              <span style={{ background: "red" }}>{props.data.report}</span>
+              <span style={{ background: "red" }}>10</span>
               <span style={{ background: "orange" }}></span>
               <span style={{ background: "yellow" }}></span>
               <span style={{ background: "blue" }}></span>
