@@ -48,7 +48,7 @@ export const Extension = (props: {
   console.log(res);
   return (
     <div>
-      <p>IZI extension</p>
+      <p>please</p>
     </div>
   );
 };
@@ -59,7 +59,7 @@ async function ApiCall(params: ApiManifestCallParams, url: string) {
     params: {
       name: params.name,
       appNamespace: params.appNamespace,
-      namespace: params.appNamespace,
+      namespace: params.namespace,
       resourceName: params.resourceName,
       version: params.version,
       kind: params.kind,
