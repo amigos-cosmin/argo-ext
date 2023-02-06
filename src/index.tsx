@@ -45,10 +45,10 @@ export const Extension = (props: {
 
   const res = ApiCall(call, url);
 
-  console.log(res);
+  console.log("AICI", res);
   return (
     <div>
-      <p>please</p>
+      <p>WORKS</p>
     </div>
   );
 };
@@ -66,5 +66,5 @@ async function ApiCall(params: ApiManifestCallParams, url: string) {
       group: params.group,
     },
   });
-  return res.data;
+  return JSON.parse(res.data);
 }
