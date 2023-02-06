@@ -32,23 +32,9 @@ const config = {
         test: /\.scss$/,
         use: ["style-loader", "raw-loader", "sass-loader"],
       },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "raw-loader"],
-      },
-      {
-        test: /\.js$/i,
-        include: path.resolve(__dirname, "src"),
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
-      },
+
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],

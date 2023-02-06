@@ -56,7 +56,7 @@ export const Extension = (props: {
   console.log("AICI", res);
   return (
     <div>
-      <p className="text-red-700">THIS SHOULD BE RED</p>
+      <p className="text-red-700">COME ON</p>
     </div>
   );
 };
