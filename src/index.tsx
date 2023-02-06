@@ -38,12 +38,13 @@ export const Extension = (props: {
     version: reports[0].version,
   };
   console.log(call);
-  let res = axios.get(
+  const url =
     "https://127.0.0.1:59935/api/v1/applications/" +
-      props.application.metadata.name +
-      "/resource",
-    { params: { call } }
-  );
+    props.application.metadata.name +
+    "/resource";
+
+  const res = ApiCall(call, url);
+
   console.log(res);
   return (
     <div>
@@ -53,3 +54,17 @@ export const Extension = (props: {
 };
 
 export const component = Extension;
+async function ApiCall(params: ApiManifestCallParams, url: string) {
+  const res = await axios.get(url, {
+    params: {
+      name: params.name,
+      appNamespace: params.appNamespace,
+      namespace: params.appNamespace,
+      resourceName: params.resourceName,
+      version: params.version,
+      kind: params.kind,
+      group: params.group,
+    },
+  });
+  return res.data;
+}
