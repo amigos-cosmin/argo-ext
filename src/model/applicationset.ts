@@ -54,11 +54,33 @@ export interface Check {
   category: string;
 }
 
+export interface PodCheck {
+  checkID: string;
+  title: string;
+  description: string;
+  message?: string[];
+  success: boolean;
+  severity: string;
+  category: string;
+}
+
+export interface ContainerCheck {
+  checkID: string;
+  title: string;
+  description: string;
+  message?: string[];
+  success: boolean;
+  severity: string;
+  category: string;
+}
+
 export interface ConfigAuditReportData {
   updateTimestamp: string;
   scanner: Scanner;
   summary: Summary;
   checks: Check[];
+  podChecks: PodCheck[];
+  containerChecks: ContainerCheck[];
 }
 
 export interface Scanner {
