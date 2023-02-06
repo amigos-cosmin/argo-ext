@@ -13,12 +13,12 @@ interface ApiManifestCallParams {
   group: string;
 }
 
-export const Extension = (props: {
+export default async function Extension(props: {
   tree: Tree;
   app: ApplicationSet;
   manifest: ManifestResponse;
   application: Application;
-}) => {
+}) {
   let reports: Node[] = [];
 
   console.log(props);
@@ -48,10 +48,10 @@ export const Extension = (props: {
   console.log("AICI", res);
   return (
     <div>
-      <p>WORKS</p>
+      <p>WORKS£@!£!@</p>
     </div>
   );
-};
+}
 
 export const component = Extension;
 async function ApiCall(params: ApiManifestCallParams, url: string) {
@@ -66,5 +66,5 @@ async function ApiCall(params: ApiManifestCallParams, url: string) {
       group: params.group,
     },
   });
-  return JSON.parse(res.data);
+  return JSON.parse(res.data.manifest);
 }
