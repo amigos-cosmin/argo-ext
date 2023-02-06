@@ -13,12 +13,12 @@ interface ApiManifestCallParams {
   group: string;
 }
 
-export default async function Extension(props: {
+export const Extension = (props: {
   tree: Tree;
   app: ApplicationSet;
   manifest: ManifestResponse;
   application: Application;
-}) {
+}) => {
   let reports: Node[] = [];
 
   console.log(props);
@@ -44,14 +44,18 @@ export default async function Extension(props: {
     "/resource";
 
   const res = ApiCall(call, url);
+  res.then((value) => {
+    console.log(value);
+    // Expected output: "Success!"
+  });
 
   console.log("AICI", res);
   return (
     <div>
-      <p>WORKS£@!£!@</p>
+      <p>WORKS00000</p>
     </div>
   );
-}
+};
 
 export const component = Extension;
 async function ApiCall(params: ApiManifestCallParams, url: string) {
