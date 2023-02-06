@@ -19,7 +19,7 @@ export const Extension = (props: {
   manifest: ManifestResponse;
   application: Application;
 }) => {
-  let reports: Node[];
+  let reports: Node[] = [];
   let call: ApiManifestCallParams;
   console.log(props);
   props.tree.nodes.forEach((element) => {
@@ -46,7 +46,7 @@ export const Extension = (props: {
   console.log(res);
   return (
     <div>
-      <p>Simple extension</p>
+      <p>HARD extension</p>
     </div>
   );
 };
