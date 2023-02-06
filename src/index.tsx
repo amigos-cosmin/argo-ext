@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ApplicationSet } from "./model/applicationset";
-import { Tree, ManifestResponse, Application, Node } from "./model/tree";
+import { Tree, Application, Node } from "./model/tree";
 import axios from "axios";
 
 interface ApiManifestCallParams {
@@ -16,36 +16,37 @@ interface ApiManifestCallParams {
 export const Extension = (props: {
   tree: Tree;
   app: ApplicationSet;
-  manifest: ManifestResponse;
   application: Application;
 }) => {
-  let reports: Node[] = [];
+  let report = {} as Node;
 
   console.log(props);
   props.tree.nodes.forEach((element) => {
-    if (element.kind.includes("Report")) {
-      reports.push(element);
+    if (element.name == props.app.metadata.name) {
+      report = element;
     }
   });
-  console.log(reports);
+  console.log(report);
   let call: ApiManifestCallParams = {
     appNamespace: props.application.metadata.namespace,
-    group: reports[0].group,
-    kind: reports[0].kind,
-    name: reports[0].name,
-    namespace: reports[0].namespace,
-    resourceName: reports[0].name,
-    version: reports[0].version,
+    group: report.group,
+    kind: report.kind,
+    name: report.name,
+    namespace: report.namespace,
+    resourceName: report.name,
+    version: report.version,
   };
-  console.log(call);
+
   const url =
     "https://127.0.0.1:59935/api/v1/applications/" +
     props.application.metadata.name +
     "/resource";
 
   const res = ApiCall(call, url);
+  let data = {} as any;
   res
     .then((value) => {
+      data = value;
       console.log("AAA", value);
       // Expected output: "Success!"
     })
@@ -53,10 +54,10 @@ export const Extension = (props: {
       console.log("err", err);
     });
 
-  console.log("AICI", res);
+  console.log(data);
   return (
     <div>
-      <p style={{ color: "red" }}>ON</p>
+      <p style={{ color: "red" }}>DATA MAN</p>
     </div>
   );
 };
