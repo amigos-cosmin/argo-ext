@@ -2,7 +2,7 @@ import * as React from "react";
 import { ApplicationSet } from "./model/applicationset";
 import { Tree, ManifestResponse, Application, Node } from "./model/tree";
 import axios from "axios";
-
+import "./model/main.css";
 interface ApiManifestCallParams {
   name: string;
   appNamespace: string;
@@ -56,7 +56,7 @@ export const Extension = (props: {
   console.log("AICI", res);
   return (
     <div>
-      <p>WORKS00000</p>
+      <p className="text-red-700">WORKS00000</p>
     </div>
   );
 };
