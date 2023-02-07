@@ -7,7 +7,9 @@ export default function TableRows(props: { data: Check }) {
   return (
     <>
       <Board.Row className={GRID_COLS}>
-        <Board.Cell className="h-full">{props.data.checkID}</Board.Cell>
+        <Board.Cell className="h-full justify-center">
+          {props.data.checkID}
+        </Board.Cell>
         <Board.Cell className="h-full items-center justify-center">
           <span
             className={
@@ -18,9 +20,15 @@ export default function TableRows(props: { data: Check }) {
             {props.data.severity}
           </span>
         </Board.Cell>
-        <Board.Cell className="h-full">{props.data.category}</Board.Cell>
-        <Board.Cell className="h-full">{props.data.description}</Board.Cell>
-        <Board.Cell className="h-full">{props.data.message}</Board.Cell>
+        <Board.Cell className="h-full justify-center">
+          {props.data.category}
+        </Board.Cell>
+        <Board.Cell className="h-full justify-center">
+          {props.data.description}
+        </Board.Cell>
+        <Board.Cell className="h-full justify-center">
+          {props.data.message.length}
+        </Board.Cell>
       </Board.Row>
     </>
   );
