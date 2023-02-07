@@ -48,7 +48,7 @@ export interface Check {
   checkID: string;
   title: string;
   description: string;
-  message?: string[];
+  messages?: string[];
   success: boolean;
   severity: string;
   category: string;

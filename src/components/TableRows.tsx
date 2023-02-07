@@ -27,7 +27,7 @@ export default function TableRows(props: { data: Check }) {
           {props.data.description}
         </Board.Cell>
         <Board.Cell className="h-full justify-center">
-          {props.data.message.length}
+          {props.data.messages}
         </Board.Cell>
       </Board.Row>
     </>
