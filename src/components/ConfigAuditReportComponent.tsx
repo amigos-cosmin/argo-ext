@@ -8,7 +8,7 @@ export default function ConfigAuditReportComponent(props: {
 }) {
   console.log(props.reportData);
   return (
-    <div className="grid grid-cols-2 ">
+    <div className="grid grid-cols-2 gap-8">
       <p className="border-b-1 border-slate-400">Created</p>
       <p className="border-b-1 border-slate-400">
         {props.data.metadata.creationTimestamp}
@@ -22,7 +22,7 @@ export default function ConfigAuditReportComponent(props: {
       <p className="border-b-1 border-slate-400">Labels</p>
       <div className="flex flex-col border-b-1 border-slate-400">
         <p>
-          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+          <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
             plugin-config-hash:
             {props.data.metadata.labels
               ? props.data.metadata.labels["plugin-config-hash"]
@@ -38,7 +38,7 @@ export default function ConfigAuditReportComponent(props: {
           </span>
         </p>
         <p>
-          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+          <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
             trivy-operator-resource-kind:
             {props.data.metadata.labels
               ? props.data.metadata.labels["trivy-operator.resource.kind"]
@@ -46,7 +46,7 @@ export default function ConfigAuditReportComponent(props: {
           </span>
         </p>
         <p>
-          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+          <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
             trivy-operator-resource-name
             {props.data.metadata.labels
               ? props.data.metadata.labels["trivy-operator.resource.name"]
