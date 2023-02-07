@@ -10,9 +10,6 @@ export default function ConfigAuditReportComponent(props: {
   data: Application;
   reportData: TrivyReport;
 }) {
-  const myKey = "plugin-config-hash";
-  console.log(props.data.metadata.labels);
-  console.log(props.data.metadata.labels[myKey]);
   return (
     <>
       <div className="grid grid-cols-2 gap-6 p-8">
@@ -33,32 +30,36 @@ export default function ConfigAuditReportComponent(props: {
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
               plugin-config-hash:
-              {props.data.metadata.labels
-                ? props.data.metadata.labels["plugin-config-hash"]
+              {props.reportData.metadata.labels
+                ? props.reportData.metadata.labels["plugin-config-hash"]
                 : "-"}
             </span>
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
               resource-spec-hash:
-              {props.data.metadata.labels
-                ? props.data.metadata.labels["resource-spec-hash"]
+              {props.reportData.metadata.labels
+                ? props.reportData.metadata.labels["resource-spec-hash"]
                 : "-"}
             </span>
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
               trivy-operator-resource-kind:
-              {props.data.metadata.labels
-                ? props.data.metadata.labels["trivy-operator.resource.kind"]
+              {props.reportData.metadata.labels
+                ? props.reportData.metadata.labels[
+                    "trivy-operator.resource.kind"
+                  ]
                 : "-"}
             </span>
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
               trivy-operator-resource-name
-              {props.data.metadata.labels
-                ? props.data.metadata.labels["trivy-operator.resource.name"]
+              {props.reportData.metadata.labels
+                ? props.reportData.metadata.labels[
+                    "trivy-operator.resource.name"
+                  ]
                 : "-"}
             </span>
           </p>
