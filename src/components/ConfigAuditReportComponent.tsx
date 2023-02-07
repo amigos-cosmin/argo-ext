@@ -21,34 +21,42 @@ export default function ConfigAuditReportComponent(props: {
       </p>
       <p className="border-b-1 border-slate-400">Labels</p>
       <div className="flex flex-col border-b-1 border-slate-400">
-        <p className="bg-slate-300">
-          plugin-config-hash:
-          {props.data.metadata.labels
-            ? props.data.metadata.labels["plugin-config-hash"]
-            : "-"}
+        <p>
+          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+            plugin-config-hash:
+            {props.data.metadata.labels
+              ? props.data.metadata.labels["plugin-config-hash"]
+              : "-"}
+          </span>
         </p>
-        <p className="bg-slate-300">
-          resource-spec-hash:
-          {props.data.metadata.labels
-            ? props.data.metadata.labels["resource-spec-hash"]
-            : "-"}
+        <p>
+          <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
+            resource-spec-hash:
+            {props.data.metadata.labels
+              ? props.data.metadata.labels["resource-spec-hash"]
+              : "-"}
+          </span>
         </p>
-        <p className="bg-slate-300">
-          trivy-operator-resource-kind:
-          {props.data.metadata.labels
-            ? props.data.metadata.labels["trivy-operator.resource.kind"]
-            : "-"}
+        <p>
+          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+            trivy-operator-resource-kind:
+            {props.data.metadata.labels
+              ? props.data.metadata.labels["trivy-operator.resource.kind"]
+              : "-"}
+          </span>
         </p>
-        <p className="bg-slate-300">
-          trivy-operator-resource-name
-          {props.data.metadata.labels
-            ? props.data.metadata.labels["trivy-operator.resource.name"]
-            : "-"}
+        <p>
+          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded text-neutral-600 bg-neutral-200 uppercase last:mr-0 mr-1">
+            trivy-operator-resource-name
+            {props.data.metadata.labels
+              ? props.data.metadata.labels["trivy-operator.resource.name"]
+              : "-"}
+          </span>
         </p>
       </div>
       <p className="border-b-1 border-slate-400">Summary</p>
       <div className="flex text-white gap-4 border-b-1 border-slate-400">
-        <p className="bg-[#cc1814] w-4 h-full text-center">
+        <p className="bg-[#cc1814] w-6 h-full text-center">
           {props.reportData.report.summary.criticalCount
             ? props.reportData.report.summary.criticalCount
             : "0"}
