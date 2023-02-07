@@ -6,12 +6,12 @@ export default function TableRows(props: { data: Check }) {
   console.log("Aici", props.data);
   return (
     <>
-      <Board.Row className={GRID_COLS + " !px-0 !py-0 divide-x"}>
+      <Board.Row className={GRID_COLS + " !px-0 !py-0 "}>
         <Board.Cell className="h-full">{props.data.checkID}</Board.Cell>
         <Board.Cell className="h-full">
           <span
             className={
-              "text-xs font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1" +
+              "text-xs font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 " +
               SeverityColor(props.data.severity)
             }
           >
