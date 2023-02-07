@@ -87,11 +87,19 @@ export default function ConfigAuditReportComponent(props: {
       <Board.Root className="h-full w-full">
         <Board.Head>
           <Board.RowBase className={GRID_COLS}>
-            <Board.ColHeader>ID</Board.ColHeader>
-            <Board.ColHeader>Severity</Board.ColHeader>
-            <Board.ColHeader>Category</Board.ColHeader>
-            <Board.ColHeader>Description</Board.ColHeader>
-            <Board.ColHeader>Message</Board.ColHeader>
+            <Board.ColHeader className="justify-center">ID</Board.ColHeader>
+            <Board.ColHeader className="justify-center">
+              Severity
+            </Board.ColHeader>
+            <Board.ColHeader className="justify-center">
+              Category
+            </Board.ColHeader>
+            <Board.ColHeader className="justify-center">
+              Description
+            </Board.ColHeader>
+            <Board.ColHeader className="justify-center">
+              Message
+            </Board.ColHeader>
           </Board.RowBase>
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
