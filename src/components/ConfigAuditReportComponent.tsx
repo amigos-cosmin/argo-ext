@@ -3,7 +3,7 @@ import { ConfigAuditReport as TrivyReport } from "../model/applicationset";
 import { Application } from "../model/tree";
 import * as Board from "./Board";
 
-const GRID_COLS = "grid-cols-[2fr_2fr_2fr_2fr_2fr]";
+const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
