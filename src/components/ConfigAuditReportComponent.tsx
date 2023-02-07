@@ -8,15 +8,19 @@ export default function ConfigAuditReportComponent(props: {
 }) {
   console.log(props.reportData);
   return (
-    <div className="grid grid-cols-2 border-b-2 border-slate-400">
-      <p>Created</p>
-      <p>{props.data.metadata.creationTimestamp}</p>
-      <p>Name</p>
-      <p>{props.data.metadata.name}</p>
+    <div className="grid grid-cols-2 ">
+      <p className="border-b-1 border-slate-400">Created</p>
+      <p className="border-b-1 border-slate-400">
+        {props.data.metadata.creationTimestamp}
+      </p>
+      <p className="border-b-1 border-slate-400">Name</p>
+      <p className="border-b-1 border-slate-400">{props.data.metadata.name}</p>
       <p>Namespace</p>
-      <p>{props.data.metadata.namespace}</p>
-      <p>Labels</p>
-      <div className="flex flex-col gap-4">
+      <p className="border-b-1 border-slate-400">
+        {props.data.metadata.namespace}
+      </p>
+      <p className="border-b-1 border-slate-400">Labels</p>
+      <div className="flex flex-col border-b-1 border-slate-400">
         <p>
           plugin-config-hash
           {props.data.metadata.labels
@@ -44,24 +48,24 @@ export default function ConfigAuditReportComponent(props: {
             : "-"}
         </p>
       </div>
-      <p>Summary</p>
-      <div className="flex text-white gap-4">
-        <p className="bg-[#cc1814] w-4 h-2">
+      <p className="border-b-1 border-slate-400">Summary</p>
+      <div className="flex text-white gap-4 border-b-1 border-slate-400">
+        <p className="bg-[#cc1814] w-4 h-full">
           {props.reportData.report.summary.criticalCount
             ? props.reportData.report.summary.criticalCount
             : "0"}
         </p>
-        <p className="bg-[#ffa500] w-4 h-2">
+        <p className="bg-[#ffa500] w-6 h-full">
           {props.reportData.report.summary.highCount
             ? props.reportData.report.summary.highCount
             : "0"}
         </p>
-        <p className="bg-[#f0c20c] w-4 h-2">
+        <p className="bg-[#f0c20c] w-6 h-full">
           {props.reportData.report.summary.mediumCount
             ? props.reportData.report.summary.mediumCount
             : "0"}
         </p>
-        <p className="bg-[#096ab0] w-4 h-2">
+        <p className="bg-[#096ab0] w-6 h-full">
           {props.reportData.report.summary.lowCount
             ? props.reportData.report.summary.lowCount
             : "0"}
