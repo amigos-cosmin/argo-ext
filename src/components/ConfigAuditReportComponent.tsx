@@ -6,6 +6,7 @@ export default function ConfigAuditReportComponent(props: {
   data: Application;
   reportData: ConfigAuditReportData;
 }) {
+  console.log(props.reportData);
   return (
     <div>
       <table>

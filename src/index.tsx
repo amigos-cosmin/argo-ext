@@ -20,7 +20,7 @@ export const Extension = (props: {
 }) => {
   //let report = {} as Node;
   const data = props.resource;
-  console.log(props.resource);
+  console.log(props.resource.summary);
   // props.tree.nodes.forEach((element) => {
   //   if (element.name == props.app.metadata.name) {
   //     report = element;
