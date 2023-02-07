@@ -3,6 +3,7 @@ import * as Board from "./Board";
 import React from "react";
 
 export default function TableRows(props: { data: TrivyReport }) {
+  console.log(props.data);
   return (
     <>
       {props.data.report.checks.map((report) => {

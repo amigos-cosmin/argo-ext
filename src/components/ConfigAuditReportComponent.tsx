@@ -10,7 +10,6 @@ export default function ConfigAuditReportComponent(props: {
   data: Application;
   reportData: TrivyReport;
 }) {
-  console.log(props.reportData);
   return (
     <div className="grid grid-cols-2 gap-6 p-8">
       <p className="border-b-[1px] border-slate-400">Created</p>
