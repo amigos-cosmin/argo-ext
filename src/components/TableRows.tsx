@@ -8,8 +8,15 @@ export default function TableRows(props: { data: Check }) {
     <>
       <Board.Row className={GRID_COLS + " !px-0 !py-0 divide-x"}>
         <Board.Cell className="h-full">{props.data.checkID}</Board.Cell>
-        <Board.Cell className={"h-full " + SeverityColor(props.data.severity)}>
-          {props.data.severity}
+        <Board.Cell className="h-full">
+          <span
+            className={
+              "text-xs font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1" +
+              SeverityColor(props.data.severity)
+            }
+          >
+            {props.data.severity}
+          </span>
         </Board.Cell>
         <Board.Cell className="h-full">{props.data.category}</Board.Cell>
         <Board.Cell className="h-full">{props.data.description}</Board.Cell>
