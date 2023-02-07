@@ -57,7 +57,9 @@ export const Extension = (props: {
   // console.log(data);
   return (
     <div>
-      <p className="text-red-500">THIS SHOULD BE RED</p>
+      <p className="font-semibold text-black text-xl">
+        {props.application.metadata.name}
+      </p>
       <ConfigAuditReportComponent reportData={data} data={props.application} />
     </div>
   );
