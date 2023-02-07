@@ -32,8 +32,8 @@ export default function ConfigAuditReportComponent(props: {
           </td>
         </tr>
         <tr>
-          <td>Labels</td>
-          <td>
+          <td style={{ padding: "0 15px 0 15px" }}>Labels</td>
+          <td style={{ padding: "0 15px 0 15px" }}>
             <p>
               plugin-config-hash
               {props.data.metadata.labels
@@ -68,12 +68,20 @@ export default function ConfigAuditReportComponent(props: {
             </p>
           </td>
           <tr>
-            <td>Sumamry</td>
+            <td>Summary</td>
             <td>
-              <span style={{ background: "red" }}>10</span>
-              <span style={{ background: "orange" }}></span>
-              <span style={{ background: "yellow" }}></span>
-              <span style={{ background: "blue" }}></span>
+              <span style={{ background: "red" }}>
+                {props.reportData.summary.criticalCount}
+              </span>
+              <span style={{ background: "orange" }}>
+                {props.reportData.summary.highCount}
+              </span>
+              <span style={{ background: "yellow" }}>
+                {props.reportData.summary.mediumCount}
+              </span>
+              <span style={{ background: "blue" }}>
+                {props.reportData.summary.lowCount}
+              </span>
             </td>
           </tr>
         </tr>
