@@ -1,12 +1,12 @@
 import React from "react";
-import { ConfigAuditReportData } from "../model/applicationset";
+import { ConfigAuditReport } from "../model/applicationset";
 import { Application } from "../model/tree";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
-  reportData: ConfigAuditReportData;
+  reportData: ConfigAuditReport;
 }) {
-  console.log(props.reportData);
+  console.log(props.reportData.report.summary);
   return (
     <div>
       <table>
@@ -72,23 +72,23 @@ export default function ConfigAuditReportComponent(props: {
             <td>Summary</td>
             <td>
               <span style={{ background: "red" }}>
-                {props.reportData.summary.criticalCount
-                  ? props.reportData.summary.criticalCount
+                {props.reportData.report.summary.criticalCount
+                  ? props.reportData.report.summary.criticalCount
                   : "0"}
               </span>
               <span style={{ background: "orange" }}>
-                {props.reportData.summary.highCount
-                  ? props.reportData.summary.highCount
+                {props.reportData.report.summary.highCount
+                  ? props.reportData.report.summary.highCount
                   : "0"}
               </span>
               <span style={{ background: "yellow" }}>
-                {props.reportData.summary.mediumCount
-                  ? props.reportData.summary.mediumCount
+                {props.reportData.report.summary.mediumCount
+                  ? props.reportData.report.summary.mediumCount
                   : "0"}
               </span>
               <span style={{ background: "blue" }}>
-                {props.reportData.summary.mediumCount
-                  ? props.reportData.summary.mediumCount
+                {props.reportData.report.summary.mediumCount
+                  ? props.reportData.report.summary.mediumCount
                   : "0"}
               </span>
             </td>

@@ -73,6 +73,7 @@ export interface ContainerCheck {
   severity: string;
   category: string;
 }
+export interface ConfigAuditReport {}
 
 export interface ConfigAuditReportData {
   updateTimestamp: string;

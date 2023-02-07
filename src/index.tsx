@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ConfigAuditReportData } from "./model/applicationset";
+import { ConfigAuditReport } from "./model/applicationset";
 import { Tree, Application } from "./model/tree";
 import ConfigAuditReportComponent from "./components/ConfigAuditReportComponent";
 import "./styles.css";
@@ -15,12 +15,12 @@ import "./styles.css";
 
 export const Extension = (props: {
   tree: Tree;
-  resource: ConfigAuditReportData;
+  resource: ConfigAuditReport;
   application: Application;
 }) => {
   //let report = {} as Node;
   const data = props.resource;
-  console.log(props.resource.summary);
+  console.log(props.resource.report.summary);
   // props.tree.nodes.forEach((element) => {
   //   if (element.name == props.app.metadata.name) {
   //     report = element;
