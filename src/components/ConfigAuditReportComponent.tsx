@@ -3,7 +3,7 @@ import { ConfigAuditReport as TrivyReport } from "../model/applicationset";
 import { Application } from "../model/tree";
 import * as Board from "./Board";
 
-const GRID_COLS = "grid-cols-[1.5fr_1fr_1fr_1fr]";
+const GRID_COLS = "grid-cols-[2fr_2fr_2fr_2fr_2fr]";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
@@ -83,7 +83,7 @@ export default function ConfigAuditReportComponent(props: {
         </p>
       </div>
 
-      <Board.Root>
+      <Board.Root className="h-full">
         <Board.Head>
           <Board.RowBase className={GRID_COLS}>
             <Board.ColHeader>ID</Board.ColHeader>
@@ -93,7 +93,7 @@ export default function ConfigAuditReportComponent(props: {
             <Board.ColHeader>Message</Board.ColHeader>
           </Board.RowBase>
         </Board.Head>
-        <Board.Body>
+        <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
           <Board.Row
             className={GRID_COLS + " border border-slate !px-0 !py-0 divide-x"}
           >
