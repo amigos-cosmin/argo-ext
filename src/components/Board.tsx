@@ -19,6 +19,4 @@ export const ColHeader = (props: {
   return <Table.Th className={props.className}>{props.children}</Table.Th>;
 };
 
-export const Row = classed(Table.Tr)(
-  "bg-purple-50 dark:bg-slate-950 flex items-center"
-);
+export const Row = classed(Table.Tr)("bg-purple-50 flex items-center");
