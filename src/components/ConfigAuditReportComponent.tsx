@@ -23,25 +23,25 @@ export default function ConfigAuditReportComponent(props: {
       <div className="flex flex-col border-b-1 border-slate-400">
         <p className="bg-slate-300">
           plugin-config-hash:
-          {props.data.metadata.labels["plugin-config-hash"]
+          {props.data.metadata.labels
             ? props.data.metadata.labels["plugin-config-hash"]
             : "-"}
         </p>
         <p className="bg-slate-300">
           resource-spec-hash:
-          {props.data.metadata.labels["resource-spec-hash"]
+          {props.data.metadata.labels
             ? props.data.metadata.labels["resource-spec-hash"]
             : "-"}
         </p>
         <p className="bg-slate-300">
           trivy-operator-resource-kind:
-          {props.data.metadata.labels["trivy-operator.resource.kind"]
+          {props.data.metadata.labels
             ? props.data.metadata.labels["trivy-operator.resource.kind"]
             : "-"}
         </p>
         <p className="bg-slate-300">
           trivy-operator-resource-name
-          {props.data.metadata.labels["trivy-operator.resource.name"]
+          {props.data.metadata.labels
             ? props.data.metadata.labels["trivy-operator.resource.name"]
             : "-"}
         </p>
