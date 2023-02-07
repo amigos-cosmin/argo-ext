@@ -9,7 +9,7 @@ export default function ConfigAuditReportComponent(props: {
   console.log(props.reportData);
   return (
     <div className="grid grid-cols-2 gap-6 p-8">
-      <p className="">Created</p>
+      <p className="border-b-[1px] border-slate-400">Created</p>
       <p className="border-b-[1px] border-slate-400">
         {props.data.metadata.creationTimestamp}
       </p>
@@ -17,7 +17,7 @@ export default function ConfigAuditReportComponent(props: {
       <p className="border-b-[1px] border-slate-400">
         {props.data.metadata.name}
       </p>
-      <p>Namespace</p>
+      <p className="border-b-[1px] border-slate-400">Namespace</p>
       <p className="border-b-[1px] border-slate-400">
         {props.data.metadata.namespace}
       </p>
@@ -56,7 +56,7 @@ export default function ConfigAuditReportComponent(props: {
           </span>
         </p>
       </div>
-      <p className="border-b-1 border-slate-400">Summary</p>
+      <p className="border-b-[1px] border-slate-400">Summary</p>
       <div className="flex text-white gap-4 border-b-1 border-slate-400">
         <p className="bg-[#cc1814] w-6 h-full text-center">
           {props.reportData.report.summary.criticalCount
