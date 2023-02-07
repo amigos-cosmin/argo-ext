@@ -57,7 +57,7 @@ export default function ConfigAuditReportComponent(props: {
         </p>
       </div>
       <p className="border-b-[1px] border-slate-400">Summary</p>
-      <div className="flex text-white gap-4 border-b-1 border-slate-400">
+      <div className="flex text-white gap-4 border-b-[1px] border-slate-400">
         <p className="bg-[#cc1814] w-6 h-full text-center">
           {props.reportData.report.summary.criticalCount
             ? props.reportData.report.summary.criticalCount
