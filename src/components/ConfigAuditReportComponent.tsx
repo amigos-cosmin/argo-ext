@@ -94,9 +94,7 @@ export default function ConfigAuditReportComponent(props: {
           </Board.RowBase>
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
-          <Board.Row className={GRID_COLS + " !px-0 !py-0 divide-x"}>
-            <TableRows data={props.reportData} />
-          </Board.Row>
+          <TableRows data={props.reportData} />
         </Board.Body>
       </Board.Root>
     </div>
