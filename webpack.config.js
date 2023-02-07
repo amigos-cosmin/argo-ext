@@ -1,5 +1,5 @@
 const path = require("path");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const groupKind = "aquasecurity.github.io/*";
 
 const config = {
@@ -39,6 +39,12 @@ const config = {
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+      chunkFilename: "styles.css",
+    }),
+  ],
 };
 
 module.exports = config;
