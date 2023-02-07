@@ -13,13 +13,16 @@ export default function ConfigAuditReportComponent(props: {
       <p className="border-b-[1px] border-slate-400">
         {props.data.metadata.creationTimestamp}
       </p>
-      <hr />
-      <p>Name</p>
-      <p>{props.data.metadata.name}</p>
+      <p className="border-b-[1px] border-slate-400">Name</p>
+      <p className="border-b-[1px] border-slate-400">
+        {props.data.metadata.name}
+      </p>
       <p>Namespace</p>
-      <p>{props.data.metadata.namespace}</p>
-      <p>Labels</p>
-      <div className="flex flex-col border-b-1 border-slate-400">
+      <p className="border-b-[1px] border-slate-400">
+        {props.data.metadata.namespace}
+      </p>
+      <p className="border-b-[1px] border-slate-400">Labels</p>
+      <div className="flex flex-col border-b-[1px] border-slate-400">
         <p>
           <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
             plugin-config-hash:
