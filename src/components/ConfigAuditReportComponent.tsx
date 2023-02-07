@@ -8,7 +8,7 @@ export default function ConfigAuditReportComponent(props: {
 }) {
   console.log(props.reportData);
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-2 gap-8 p-8">
       <p className="border-b-1 border-slate-400">Created</p>
       <p className="border-b-1 border-slate-400">
         {props.data.metadata.creationTimestamp}
