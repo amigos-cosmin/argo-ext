@@ -6,9 +6,9 @@ export default function ConfigAuditReportComponent(props: {
   data: Application;
   reportData: TrivyReport;
 }) {
-  console.log(props.reportData.report.summary);
+  console.log(props.reportData);
   return (
-    <div className="grid grid-cols-2 border-slate-400 border-b-1">
+    <div className="grid grid-cols-2 border-b-2 border-slate-400">
       <p>Created</p>
       <p>{props.data.metadata.creationTimestamp}</p>
       <p>Name</p>
@@ -46,22 +46,22 @@ export default function ConfigAuditReportComponent(props: {
       </div>
       <p>Summary</p>
       <div className="flex text-white gap-4">
-        <p className="bg-[#cc1814]">
+        <p className="bg-[#cc1814] w-4 h-2">
           {props.reportData.report.summary.criticalCount
             ? props.reportData.report.summary.criticalCount
             : "0"}
         </p>
-        <p className="bg-[#ffa500]">
+        <p className="bg-[#ffa500] w-4 h-2">
           {props.reportData.report.summary.highCount
             ? props.reportData.report.summary.highCount
             : "0"}
         </p>
-        <p className="bg-[#f0c20c]">
+        <p className="bg-[#f0c20c] w-4 h-2">
           {props.reportData.report.summary.mediumCount
             ? props.reportData.report.summary.mediumCount
             : "0"}
         </p>
-        <p className="bg-[#096ab0]">
+        <p className="bg-[#096ab0] w-4 h-2">
           {props.reportData.report.summary.lowCount
             ? props.reportData.report.summary.lowCount
             : "0"}
