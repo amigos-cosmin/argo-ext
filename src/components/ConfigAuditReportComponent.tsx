@@ -21,7 +21,7 @@ export default function ConfigAuditReportComponent(props: {
           <td>Name</td>
           <td>{props.data.metadata.name}</td>
         </tr>
-        <tr>
+        <tr style={{ gap: "10px" }}>
           <td>Namespace</td>
           <td>{props.data.metadata.namespace}</td>
         </tr>
