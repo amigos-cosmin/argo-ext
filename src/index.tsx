@@ -58,7 +58,7 @@ export const Extension = (props: {
   return (
     <div>
       <p className="font-semibold text-black text-xl text-center p-8">
-        {props.application.kind}
+        {props.resource.kind}
       </p>
       <ConfigAuditReportComponent reportData={data} data={props.application} />
     </div>

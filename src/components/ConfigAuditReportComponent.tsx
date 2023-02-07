@@ -8,18 +8,17 @@ export default function ConfigAuditReportComponent(props: {
 }) {
   console.log(props.reportData);
   return (
-    <div className="grid grid-cols-2 gap-8 p-8">
-      <p className="border-b-1 border-slate-400">Created</p>
-      <p className="border-b-1 border-slate-400">
+    <div className="grid grid-cols-2 gap-6 p-8">
+      <p className="">Created</p>
+      <p className="border-b-[1px] border-slate-400">
         {props.data.metadata.creationTimestamp}
       </p>
-      <p className="border-b-1 border-slate-400">Name</p>
-      <p className="border-b-1 border-slate-400">{props.data.metadata.name}</p>
+      <hr />
+      <p>Name</p>
+      <p>{props.data.metadata.name}</p>
       <p>Namespace</p>
-      <p className="border-b-1 border-slate-400">
-        {props.data.metadata.namespace}
-      </p>
-      <p className="border-b-1 border-slate-400">Labels</p>
+      <p>{props.data.metadata.namespace}</p>
+      <p>Labels</p>
       <div className="flex flex-col border-b-1 border-slate-400">
         <p>
           <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
