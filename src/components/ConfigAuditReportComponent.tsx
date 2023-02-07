@@ -1,14 +1,22 @@
 import React from "react";
-import { ConfigAuditReport } from "../model/applicationset";
+import { ConfigAuditReport as TrivyReport } from "../model/applicationset";
 import { Application } from "../model/tree";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
-  reportData: ConfigAuditReport;
+  reportData: TrivyReport;
 }) {
   console.log(props.reportData.report.summary);
   return (
     <div>
+      <div className="grid grid-cols-2">
+        <p>Created</p>
+        <p>{props.data.metadata.creationTimestamp}</p>
+        <p>Name</p>
+        <p>{props.data.metadata.name}</p>
+        <p>Namespace</p>
+        <p>{props.data.metadata.namespace}</p>
+      </div>
       <table>
         <tr>
           <th></th>
