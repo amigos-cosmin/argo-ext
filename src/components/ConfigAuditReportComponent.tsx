@@ -13,19 +13,19 @@ export default function ConfigAuditReportComponent(props: {
           <th></th>
           <th></th>
         </tr>
-        <tr>
+        <tr style={{ paddingBottom: "15px" }}>
           <td style={{ padding: "0 15px 0 15px" }}>Created</td>
           <td style={{ padding: "0 15px 0 15px" }}>
             {props.data.metadata.creationTimestamp}
           </td>
         </tr>
-        <tr>
+        <tr style={{ paddingBottom: "15px" }}>
           <td style={{ padding: "0 15px 0 15px" }}>Name</td>
           <td style={{ padding: "0 15px 0 15px" }}>
             {props.data.metadata.name}
           </td>
         </tr>
-        <tr>
+        <tr style={{ paddingBottom: "15px" }}>
           <td style={{ padding: "0 15px 0 15px" }}>Namespace</td>
           <td style={{ padding: "0 15px 0 15px" }}>
             {props.data.metadata.namespace}

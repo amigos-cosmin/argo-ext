@@ -57,9 +57,6 @@ export const Extension = (props: {
   // console.log(data);
   return (
     <div>
-      <p className="from-neutral-500">Cosmin</p>
-      <p className="text-blue-500">Cosmin</p>
-      <p className="text-green-500">Cosmin</p>
       <ConfigAuditReportComponent reportData={data} data={props.application} />
     </div>
   );
