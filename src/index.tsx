@@ -2,7 +2,7 @@ import * as React from "react";
 import { ConfigAuditReportData } from "./model/applicationset";
 import { Tree, Application } from "./model/tree";
 import ConfigAuditReportComponent from "./components/ConfigAuditReportComponent";
-import "./styles/main.css";
+import "./styles.css";
 // interface ApiManifestCallParams {
 //   name: string;
 //   appNamespace: string;
@@ -57,7 +57,8 @@ export const Extension = (props: {
   // console.log(data);
   return (
     <div>
-      <p className="text-red-500">Cosmin</p>
+      <p className={"text-red-500"}>Cosmin</p>
+      <p className="text-blue-500">Cosmin</p>
       <ConfigAuditReportComponent reportData={data} data={props.application} />
     </div>
   );
