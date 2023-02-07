@@ -71,16 +71,24 @@ export default function ConfigAuditReportComponent(props: {
             <td>Summary</td>
             <td>
               <span style={{ background: "red" }}>
-                {props.reportData.summary.criticalCount}
+                {props.reportData.summary.criticalCount
+                  ? props.reportData.summary.criticalCount
+                  : "0"}
               </span>
               <span style={{ background: "orange" }}>
-                {props.reportData.summary.highCount}
+                {props.reportData.summary.highCount
+                  ? props.reportData.summary.highCount
+                  : "0"}
               </span>
               <span style={{ background: "yellow" }}>
-                {props.reportData.summary.mediumCount}
+                {props.reportData.summary.mediumCount
+                  ? props.reportData.summary.mediumCount
+                  : "0"}
               </span>
               <span style={{ background: "blue" }}>
-                {props.reportData.summary.lowCount}
+                {props.reportData.summary.mediumCount
+                  ? props.reportData.summary.mediumCount
+                  : "0"}
               </span>
             </td>
           </tr>
