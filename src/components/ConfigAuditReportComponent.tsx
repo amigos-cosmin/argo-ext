@@ -94,7 +94,9 @@ export default function ConfigAuditReportComponent(props: {
           </Board.RowBase>
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
-          <TableRows data={props.reportData} />
+          {props.reportData.report.checks.map((report) => (
+            <TableRows data={report} />
+          ))}
         </Board.Body>
       </Board.Root>
     </div>
