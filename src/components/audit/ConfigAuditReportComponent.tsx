@@ -1,8 +1,8 @@
 import React from "react";
-import { ConfigAuditReport } from "../model/Types";
-import { Application } from "../model/tree";
-import * as Board from "./Board";
-import TableRows from "./TableRows";
+import { ConfigAuditReport } from "../../model/Types";
+import { Application } from "../../model/tree";
+import * as Board from "../Board";
+import TableRowsAudit from "./TableRowsAudit";
 
 const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
 
@@ -109,7 +109,7 @@ export default function ConfigAuditReportComponent(props: {
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
           {props.reportData.report.checks.map((report) => (
-            <TableRows data={report} />
+            <TableRowsAudit data={report} />
           ))}
         </Board.Body>
       </Board.Root>

@@ -1,8 +1,9 @@
 import * as React from "react";
+import ConfigAuditReportComponent from "./components/audit/ConfigAuditReportComponent";
 import { ConfigAuditReport, VulnerabilityReport } from "./model/Types";
-import { Tree, Application } from "./model/tree";
-import ConfigAuditReportComponent from "./components/ConfigAuditReportComponent";
+import { Application, Tree } from "./model/tree";
 import "./styles.css";
+import VulnerabilityReportComponent from "./components/vulnerability/VulnerabilityReportComponent";
 
 export const Extension = (props: {
   tree: Tree;
@@ -35,6 +36,6 @@ function ReportType(
       return <ConfigAuditReportComponent reportData={data} data={app} />;
     case "VulnerabilityReport":
       data = report as VulnerabilityReport;
-      return <div>{data.report.registry.server}</div>;
+      return <VulnerabilityReportComponent reportData={data} data={app} />;
   }
 }
