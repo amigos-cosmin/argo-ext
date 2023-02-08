@@ -1,7 +1,7 @@
 import React from "react";
 import { Check } from "../../model/Types";
 import * as Board from "../Board";
-const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
+const GRID_COLS = "grid-cols-[1fr_1fr_1fr_3fr_1fr]";
 export default function TableRows(props: { data: Check }) {
   console.log("Aici", props.data);
   return (
@@ -27,7 +27,7 @@ export default function TableRows(props: { data: Check }) {
         <Board.Cell className="h-full justify-center">
           {props.data.messages}
         </Board.Cell>
-        <Board.Cell className="h-full justify-center">
+        <Board.Cell className="justify-center">
           {props.data.success ? (
             <p className="bg-[#00b09b] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
               PASS

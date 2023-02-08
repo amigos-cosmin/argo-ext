@@ -4,7 +4,7 @@ import { Application } from "../../model/tree";
 import * as Board from "../Board";
 import TableRowsAudit from "./TableRowsAudit";
 
-const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
+const GRID_COLS = "grid-cols-[1fr_1fr_1fr_3fr_1fr]";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
