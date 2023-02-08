@@ -1,4 +1,4 @@
-import { Check } from "../model/applicationset";
+import { Check } from "../model/Types";
 import * as Board from "./Board";
 import React from "react";
 const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";

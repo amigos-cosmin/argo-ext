@@ -1,5 +1,5 @@
 import React from "react";
-import { ConfigAuditReport as TrivyReport } from "../model/applicationset";
+import { ConfigAuditReport } from "../model/Types";
 import { Application } from "../model/tree";
 import * as Board from "./Board";
 import TableRows from "./TableRows";
@@ -8,7 +8,7 @@ const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
 
 export default function ConfigAuditReportComponent(props: {
   data: Application;
-  reportData: TrivyReport;
+  reportData: ConfigAuditReport;
 }) {
   console.log(props.reportData);
   return (

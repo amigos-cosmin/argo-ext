@@ -37,6 +37,13 @@ export interface ConfigAuditReport {
   report: ConfigAuditReportData;
 }
 
+export interface VulnerabilityReport {
+  apiVersion?: string;
+  kind?: string;
+  metadata: models.ObjectMeta;
+  report: VulnerabilityReportData;
+}
+
 export interface Summary {
   criticalCount: number;
   highCount: number;
@@ -73,7 +80,6 @@ export interface ContainerCheck {
   severity: string;
   category: string;
 }
-export interface ConfigAuditReport {}
 
 export interface ConfigAuditReportData {
   updateTimestamp: string;
@@ -88,6 +94,41 @@ export interface Scanner {
   name: string;
   vendor: string;
   version: string;
+}
+
+export interface Vulnerability {
+  vulnerabilityID: string;
+  title?: string;
+  resource: string;
+  installedVersion: string;
+  fixedVersion?: string;
+  severity: string;
+  target: string;
+  primaryLink?: string[];
+}
+
+export interface VulnerabilitySummary {
+  criticalCount: number;
+  highCount: number;
+  lowCount: number;
+  mediumCount: number;
+  noneCount: number;
+  unknownCount: number;
+}
+
+export interface VulnerabilityReportData {
+  updateTimestamp: string;
+  registry: {
+    server: string;
+  };
+  artifact: {
+    repository: string;
+    tag?: string;
+    digest?: string;
+  };
+  scanner: Scanner;
+  summary: VulnerabilitySummary;
+  vulnerabilities: Vulnerability[];
 }
 
 export interface ApplicationSetSpec {
