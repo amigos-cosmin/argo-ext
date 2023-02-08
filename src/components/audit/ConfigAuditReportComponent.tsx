@@ -100,11 +100,9 @@ export default function ConfigAuditReportComponent(props: {
               Category
             </Board.ColHeader>
             <Board.ColHeader className="justify-center">
-              Description
-            </Board.ColHeader>
-            <Board.ColHeader className="justify-center">
               Message
             </Board.ColHeader>
+            <Board.ColHeader className="justify-center">Status</Board.ColHeader>
           </Board.RowBase>
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">

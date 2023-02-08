@@ -23,11 +23,20 @@ export default function TableRows(props: { data: Check }) {
         <Board.Cell className="h-full justify-center">
           {props.data.category}
         </Board.Cell>
-        <Board.Cell className="h-full justify-center">
-          {props.data.description}
-        </Board.Cell>
+
         <Board.Cell className="h-full justify-center">
           {props.data.messages}
+        </Board.Cell>
+        <Board.Cell className="h-full justify-center">
+          {props.data.success ? (
+            <p className="bg-[#00b09b] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
+              PASS
+            </p>
+          ) : (
+            <p className="bg-[#cc1814] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
+              FAIL
+            </p>
+          )}
         </Board.Cell>
       </Board.Row>
     </>
