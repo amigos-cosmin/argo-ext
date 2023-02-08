@@ -66,23 +66,23 @@ export default function ConfigAuditReportComponent(props: {
           </p>
         </div>
         <p className="border-b-[1px] border-slate-400">Summary</p>
-        <div className="flex text-white gap-4 border-b-[1px] border-slate-400">
-          <p className="bg-[#cc1814] w-6 h-full text-center">
+        <div className="flex text-white gap-6 border-b-[1px] border-slate-400">
+          <p className="bg-[#cc1814] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
             {props.reportData.report.summary.criticalCount
               ? props.reportData.report.summary.criticalCount
               : "0"}
           </p>
-          <p className="bg-[#ffa500] w-6 h-full text-center">
+          <p className="bg-[#ffa500] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
             {props.reportData.report.summary.highCount
               ? props.reportData.report.summary.highCount
               : "0"}
           </p>
-          <p className="bg-[#f0c20c] w-6 h-full text-center">
+          <p className="bg-[#f0c20c] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
             {props.reportData.report.summary.mediumCount
               ? props.reportData.report.summary.mediumCount
               : "0"}
           </p>
-          <p className="bg-[#096ab0] w-6 h-full text-center">
+          <p className="bg-[#096ab0] font-semibold inline-block py-1 px-2 rounded text-white last:mr-0 mr-1 h-full text-center">
             {props.reportData.report.summary.lowCount
               ? props.reportData.report.summary.lowCount
               : "0"}
