@@ -43,5 +43,11 @@ function ReportType(
     case "RbacAssessmentReport":
       data = report as ConfigAuditReport;
       return <ConfigAuditReportComponent reportData={data} data={app} />;
+    case "InfraAssessmentReport":
+      data = report as ConfigAuditReport;
+      return <ConfigAuditReportComponent reportData={data} data={app} />;
+    case "ExposedSecretReport":
+      data = report as ConfigAuditReport;
+      return <ConfigAuditReportComponent reportData={data} data={app} />;
   }
 }
