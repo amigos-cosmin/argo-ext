@@ -16,15 +16,15 @@ export default function ConfigAuditReportComponent(props: {
       <div className="grid grid-cols-2 gap-6 p-8">
         <p className="border-b-[1px] border-slate-400">Created</p>
         <p className="border-b-[1px] border-slate-400">
-          {props.data.metadata.creationTimestamp}
+          {props.reportData.metadata.creationTimestamp}
         </p>
         <p className="border-b-[1px] border-slate-400">Name</p>
         <p className="border-b-[1px] border-slate-400">
-          {props.data.metadata.name}
+          {props.reportData.metadata.name}
         </p>
         <p className="border-b-[1px] border-slate-400">Namespace</p>
         <p className="border-b-[1px] border-slate-400">
-          {props.data.metadata.namespace}
+          {props.reportData.metadata.namespace}
         </p>
         <p className="border-b-[1px] border-slate-400">Labels</p>
         <div className="grid grid-cols-2 border-b-[1px] border-slate-400">
