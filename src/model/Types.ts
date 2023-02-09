@@ -44,6 +44,13 @@ export interface VulnerabilityReport {
   report: VulnerabilityReportData;
 }
 
+export interface ExposedSecretsReport {
+  apiVersion?: string;
+  kind?: string;
+  metadata: models.ObjectMeta;
+  report: ExposedSecretReportData;
+}
+
 export interface Summary {
   criticalCount: number;
   highCount: number;
@@ -129,6 +136,38 @@ export interface VulnerabilityReportData {
   scanner: Scanner;
   summary: VulnerabilitySummary;
   vulnerabilities: Vulnerability[];
+}
+
+export interface ExposedSecretSummary {
+  criticalCount: number;
+  highCount: number;
+  lowCount: number;
+  mediumCount: number;
+  noneCount: number;
+}
+
+export interface ExposedSecretReportData {
+  updateTimestamp: string;
+  registry: {
+    server: string;
+  };
+  artifact: {
+    repository: string;
+    tag?: string;
+    digest?: string;
+  };
+  scanner: Scanner;
+  summary: ExposedSecretSummary;
+  secrets: ExposedSecret[];
+}
+
+export interface ExposedSecret {
+  ruleID: string;
+  title?: string;
+  target: string;
+  category: string;
+  match: string;
+  severity: string;
 }
 
 export interface ApplicationSetSpec {

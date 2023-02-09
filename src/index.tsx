@@ -37,5 +37,11 @@ function ReportType(
     case "VulnerabilityReport":
       data = report as VulnerabilityReport;
       return <VulnerabilityReportComponent reportData={data} data={app} />;
+    case "ClusterRbacAssessmentReport":
+      data = report as ConfigAuditReport;
+      return <ConfigAuditReportComponent reportData={data} data={app} />;
+    case "RbacAssessmentReport":
+      data = report as ConfigAuditReport;
+      return <ConfigAuditReportComponent reportData={data} data={app} />;
   }
 }
