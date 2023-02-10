@@ -30,7 +30,7 @@ export default function ConfigAuditReportComponent(props: {
         <div className="grid grid-cols-2 border-b-[1px] border-slate-400">
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
-              plugin-config-hash:
+              plugin-config-hash:&nbsp;
               {props.reportData.metadata.labels
                 ? props.reportData.metadata.labels["plugin-config-hash"]
                 : "-"}
@@ -38,7 +38,7 @@ export default function ConfigAuditReportComponent(props: {
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
-              resource-spec-hash:
+              resource-spec-hash:&nbsp;
               {props.reportData.metadata.labels
                 ? props.reportData.metadata.labels["resource-spec-hash"]
                 : "-"}
@@ -46,7 +46,7 @@ export default function ConfigAuditReportComponent(props: {
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
-              trivy-operator-resource-kind:
+              trivy-operator-resource-kind:&nbsp;
               {props.reportData.metadata.labels
                 ? props.reportData.metadata.labels[
                     "trivy-operator.resource.kind"
@@ -56,7 +56,7 @@ export default function ConfigAuditReportComponent(props: {
           </p>
           <p>
             <span className="text-xs font-semibold inline-block py-1 px-2 rounded text-neutral-600 bg-neutral-200 last:mr-0 mr-1">
-              trivy-operator-resource-name
+              trivy-operator-resource-name:&nbsp;
               {props.reportData.metadata.labels
                 ? props.reportData.metadata.labels[
                     "trivy-operator.resource.name"
