@@ -6,7 +6,7 @@ import TableRowsSecrets from "./TableRowsSecrets";
 
 const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
 
-export default function VulnerabilityReportComponent(props: {
+export default function ExposedSecretsReport(props: {
   data: Application;
   reportData: ExposedSecretsReport;
 }) {
@@ -109,8 +109,8 @@ export default function VulnerabilityReportComponent(props: {
           </Board.RowBase>
         </Board.Head>
         <Board.Body className="!gap-0 overflow-hidden overflow-y-auto">
-          {props.reportData.report.secrets.map((vulnerability) => (
-            <TableRowsSecrets data={vulnerability} />
+          {props.reportData.report.secrets.map((secrets) => (
+            <TableRowsSecrets data={secrets} />
           ))}
         </Board.Body>
       </Board.Root>

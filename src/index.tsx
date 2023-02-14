@@ -1,13 +1,18 @@
 import * as React from "react";
 import ConfigAuditReportComponent from "./components/audit/ConfigAuditReportComponent";
-import { ConfigAuditReport, VulnerabilityReport } from "./model/Types";
+import {
+  ConfigAuditReport,
+  ExposedSecretsReport,
+  VulnerabilityReport,
+} from "./model/Types";
 import { Application, Tree } from "./model/tree";
 import "./styles.css";
 import VulnerabilityReportComponent from "./components/vulnerability/VulnerabilityReportComponent";
+import ExposedSecretsReportComponent from "./components/secrets/ExposedSecretsReport";
 
 export const Extension = (props: {
   tree: Tree;
-  resource: ConfigAuditReport | VulnerabilityReport;
+  resource: ConfigAuditReport | VulnerabilityReport | ExposedSecretsReport;
   application: Application;
 }) => {
   console.log(props.resource);
@@ -26,7 +31,7 @@ export const Extension = (props: {
 export const component = Extension;
 
 function ReportType(
-  report: ConfigAuditReport | VulnerabilityReport,
+  report: ConfigAuditReport | VulnerabilityReport | ExposedSecretsReport,
   app: Application
 ) {
   let data;
@@ -47,7 +52,7 @@ function ReportType(
       data = report as ConfigAuditReport;
       return <ConfigAuditReportComponent reportData={data} data={app} />;
     case "ExposedSecretReport":
-      data = report as ConfigAuditReport;
-      return <ConfigAuditReportComponent reportData={data} data={app} />;
+      data = report as ExposedSecretsReport;
+      return <ExposedSecretsReportComponent reportData={data} data={app} />;
   }
 }
