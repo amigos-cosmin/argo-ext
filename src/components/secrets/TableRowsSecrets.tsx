@@ -3,7 +3,6 @@ import { ExposedSecret } from "../../model/Types";
 import * as Board from "../Board";
 const GRID_COLS = "grid-cols-[1fr_1fr_1fr_2fr_2fr]";
 export default function TableRows(props: { data: ExposedSecret }) {
-  console.log("Aici", props.data);
   return (
     <>
       <Board.Row className={GRID_COLS}>

@@ -3,7 +3,6 @@ import { Check } from "../../model/Types";
 import * as Board from "../Board";
 const GRID_COLS = "grid-cols-[1fr_1fr_1fr_3fr_1fr]";
 export default function TableRows(props: { data: Check }) {
-  console.log("Aici", props.data);
   return (
     <>
       <Board.Row className={GRID_COLS}>

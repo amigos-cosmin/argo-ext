@@ -10,7 +10,6 @@ export default function ExposedSecretsReport(props: {
   data: Application;
   reportData: ExposedSecretsReport;
 }) {
-  console.log(props.reportData);
   return (
     <>
       <div className="grid grid-cols-2 gap-6 p-8">
