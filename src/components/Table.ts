@@ -11,7 +11,7 @@ export const Th = classed.th(
 );
 
 // Body
-export const Tbody = classed.tbody("flex flex-col gap-2.5");
+export const Tbody = classed.tbody("");
 
 export const Tr = classed.tr("grid text-sm px-5 py-3");
 
