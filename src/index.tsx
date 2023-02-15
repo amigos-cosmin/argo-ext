@@ -15,8 +15,6 @@ export const Extension = (props: {
   resource: ConfigAuditReport | VulnerabilityReport | ExposedSecretsReport;
   application: Application;
 }) => {
-  console.log(props.resource);
-
   return (
     <div>
       <p className="font-semibold text-black text-xl text-center p-8">
